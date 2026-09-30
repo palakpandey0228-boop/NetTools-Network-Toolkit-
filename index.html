@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetTools – Network Toolkit | Palak Kumari</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">🌐</div>
+      <div>
+        <h1>NetTools</h1>
+        <p>Network Toolkit</p>
+      </div>
+    </div>
+    <div class="creator">Created by <strong>Palak Kumari</strong></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="badge">NETWORKING LEARNING PROJECT</span>
+      <h2>IPv4 & Subnet Toolkit</h2>
+      <p>Calculate networks, CIDR ranges, broadcast addresses, IP classes and binary values.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card wide">
+        <h3>🧮 IPv4 / CIDR Calculator</h3>
+        <div class="form-grid">
+          <label>IPv4 Address
+            <input id="ip" value="192.168.10.45" placeholder="192.168.1.10">
+          </label>
+          <label>CIDR Prefix
+            <select id="cidr"></select>
+          </label>
+        </div>
+        <button onclick="calculate()">Calculate Network</button>
+        <div id="result" class="result hidden"></div>
+      </article>
+
+      <article class="card">
+        <h3>🔢 Binary ↔ Decimal</h3>
+        <label>Decimal (0–255)
+          <input id="dec" placeholder="192">
+        </label>
+        <button onclick="toBinary()">Decimal → Binary</button>
+        <label>Binary (8 bits)
+          <input id="bin" placeholder="11000000">
+        </label>
+        <button class="secondary" onclick="toDecimal()">Binary → Decimal</button>
+        <p id="convertResult" class="mini-result"></p>
+      </article>
+
+      <article class="card">
+        <h3>🏷️ IP Class Detector</h3>
+        <label>IPv4 Address
+          <input id="classIp" value="192.168.1.1" placeholder="8.8.8.8">
+        </label>
+        <button onclick="detectClass()">Detect Class</button>
+        <div id="classResult" class="mini-result"></div>
+      </article>
+
+      <article class="card wide">
+        <h3>📚 Quick Networking Reference</h3>
+        <div class="reference">
+          <div><b>Class A</b><span>1–126</span></div>
+          <div><b>Class B</b><span>128–191</span></div>
+          <div><b>Class C</b><span>192–223</span></div>
+          <div><b>Class D</b><span>224–239 · Multicast</span></div>
+          <div><b>Class E</b><span>240–255 · Experimental</span></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <strong>NetTools – Network Toolkit</strong>
+    <span>Made for networking practice · Created by Palak Kumari</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
